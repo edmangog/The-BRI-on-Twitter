@@ -8,7 +8,6 @@ nltk==3.5
 numpy==1.18.2
 pandas==1.3.4
 rich==11.2.0
-snscrape==0.4.2.20211215
 spacy==2.3.2
 tqdm==4.45.0
 tweepy==4.4.0
