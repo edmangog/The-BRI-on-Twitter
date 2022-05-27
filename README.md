@@ -1,6 +1,8 @@
-# The-BRI-on-Twitter
+# The-BRI-on-Twitter: More than one million Belt and Road Initaitive Tweets with annotations of languague, sentiment, and geopolitical entities
 
-This repository stores the programming scripts applied to retrieve tweets and retweets related to the Belt and Road Initiative by using Twitter APIs.
+Dataset: https://figshare.com/articles/dataset/The_Belt_and_Road_Initiative_on_Twitter_An_Annotated_Dataset/18623522
+
+This repository stores the programming scripts applied to retrieve tweets and retweets related to the Belt and Road Initiative
 ![Picture1](https://user-images.githubusercontent.com/64972156/170441406-6e6283ac-2cb6-4184-90cc-43c2ea146d07.png)
 
 
@@ -34,4 +36,3 @@ Therefore, the Irrelevance.py was applied to locate those potentially irrelevant
 	in order to classify different opinions around the BRI by nation
 
 4.1GetRetweets.py: The scripts for retrieving retweets by using Twitter APIs
-  
