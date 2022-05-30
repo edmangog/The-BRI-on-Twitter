@@ -1,6 +1,4 @@
-# The-BRI-on-Twitter: More than one million Belt and Road Initaitive Tweets with annotations of languague, sentiment, and geopolitical entities
-
-Dataset: https://figshare.com/articles/dataset/The_Belt_and_Road_Initiative_on_Twitter_An_Annotated_Dataset/18623522
+# The-BRI-on-Twitter: More than one million Belt and Road Initaitive (re)tweets with annotations of languague, sentiment, and geopolitical entities
 
 This repository stores the programming scripts applied to retrieve tweets and retweets related to the Belt and Road Initiative
 ![Picture1](https://user-images.githubusercontent.com/64972156/170441406-6e6283ac-2cb6-4184-90cc-43c2ea146d07.png)
@@ -15,24 +13,22 @@ ambiguity of keywords applied in search, such as "seat belt and road safety" and
 Therefore, the Irrelevance.py was applied to locate those potentially irrelevant tweets.
 
 3.NLP: This folder stores six files of python scripts for processing the textual information in the raw data.
+<!-- TABLE_GENERATE_START -->
 
-	3.1:language detection.py: Use FastText to detect the dominant language of texts in the columns: text, hashtag, bio,
-	profile_location, political identity
+| Script  | Description |
+| ------------- | ------------- |
+| 3.1:language detection.py | Use FastText to detect the dominant language of texts in the columns: text, hashtag, bio, rofile_location, political identity |
+| 3.2Translation.py | A script for executing neural machine translation by employing EasyNMT  |
+| 3.3Sentiment Analysis.py | A script for running VADER, a lexicon-based sentiment analysis tool, on texts of tweets,in order to capture the sentimental polarity and ntensity of tweets.  |
+| 3.4Text_normalization.py | Using the natural language processing toolkit “NTLK”  to remove redundant information and retain the simplest form of words in tweets. Specifically, four steps were involved, including (1). translating emoticons into texts, (2). removing hyperlinks, usernames, punctuation, and modal verbs, (3). lemmatization, and (4). tokenization  |
+| 3.5Named Entities Recognition.py | A script for interpreting the geographical locations of tweets based on the self-declared location fields in posters’ profiles. Since non-toponymic inputs, such as hyperlinks and emoticons may be found in location fields, NLTK was applied for identifying toponyms and eliminating irrelevant inputs.  |
+| 3.6Geocoding.py | A script for employing Geocoding software Nominatim to extract the country names of recognized locations in order to classify different opinions around the BRI by nation  |
 
-	3.2Translation.py: A script for executing neural machine translation by employing EasyNMT
-
-	3.3Sentiment Analysis.py: A script for running VADER, a lexicon-based sentiment analysis tool, on texts of tweets, 
-	in order to capture the sentimental polarity and intensity of tweets.
-
-	3.4Text_normalization.py: Using the natural language processing toolkit “NTLK”  to remove redundant information and retain the
-	simplest form of words in tweets. Specifically, four steps were involved, including (1). translating emoticons into texts,
-	(2). removing hyperlinks, usernames, punctuation, and modal verbs, (3). lemmatization, and (4). tokenization
-
-	3.5Named Entities Recognition.py: A script for interpreting the geographical locations of tweets based on the self-declared location 
-	fields in posters’ profiles. Since non-toponymic inputs, such as hyperlinks and emoticons may be found in location fields, NLTK was 
-	applied for identifying toponyms and eliminating irrelevant inputs.
-
-	3.6Geocoding.py: The script for employing Geocoding software Nominatim to extract the country names of recognized locations
-	in order to classify different opinions around the BRI by nation
-
+<!-- TABLE_GENERATE_END -->
 4.1GetRetweets.py: The scripts for retrieving retweets by using Twitter APIs
+
+# Download
+Dataset: https://figshare.com/articles/dataset/The_Belt_and_Road_Initiative_on_Twitter_An_Annotated_Dataset/18623522
+
+# Tweets hydration
+To fetches full tweet content, such as the URLs of tweets and user handles, variables of unique identifiers of Twitter users and tweets contained in the dataset : “user_id” and “tweet_id” can be used to hydrate tweets by using Twitter APIs.
